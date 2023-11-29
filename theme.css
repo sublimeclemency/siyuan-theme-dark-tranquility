@@ -1,0 +1,289 @@
+/* this is a theme.css file for siyuan */
+
+:root{
+    --b3-theme-primary: hsl(163.28deg 54.79% 47.41%);
+    --b3-theme-primary-light: hsl(162.14deg 55.01% 54.84% / 72%);
+    --b3-theme-primary-lighter: hsl(169.89deg 86.18% 57.45% / 48%);
+    --b3-theme-primary-lightest: rgb(53 240 224 / 16%);
+    --b3-card-success-background: #2C7866;
+    --b3-card-info-background:#23ACEB;
+    --b3-theme-background:#000;
+    --b3-theme-on-background: #000
+    --b3-theme-surface: #202734;
+    --b3-protyle-inline-blockref-color: #2fffe4;
+    --b3-border-color: #93eace3d;
+    --b3-theme-on-surface-light: #96f6c8;
+    --b3-protyle-code-background:#13212b;
+    --b3-toolbar-blur-background: var(--b3-toolbar-background);
+
+    --b3-tooltips-background: #111e28;
+    --b3-tooltips-color: #96f6c8c4;
+    --b3-protyle-inline-link-color: #91d9eb;
+
+    --b3-graph-p-point: #076f7e;
+    --b3-graph-heading-point: hsl(254, 80%, 74.8%);
+    --b3-graph-math-point: #80FFA5;
+    --b3-graph-code-point: #00DDFF;
+    --b3-graph-table-point: #37A2FF;
+    --b3-graph-list-point: #FF0087;
+    --b3-graph-todo-point: #FFBF00;
+    --b3-graph-olist-point: #b3005f;
+    --b3-graph-listitem-point: #f65b00;
+    --b3-graph-bq-point: #8d48e3;
+    --b3-graph-super-point: #dd79ff;
+    --b3-graph-doc-point: #e8eaed;
+    --b3-graph-tag-point: #dbf32f;
+    --b3-graph-asset-point: #05c091;
+    --b3-graph-line: #9aa0a6;
+    --b3-graph-ref-line: var(--b3-protyle-inline-blockref-color);
+    --b3-graph-tag-line: #5f6b06;
+    --b3-graph-tag-tag-line: #dbf32f;
+    --b3-graph-asset-line: #037457;
+    --b3-graph-hl-point: #f3a92f;
+    --b3-graph-hl-line: #55b0ff;
+
+    --b3-border-radius: 0.2em;
+    --b3-border-radius-b: 5px;
+    --b3-dialog-shadow: 0 0px 0px 2px #4be7c696, 0 0 26px 3px #6cc0ae70;
+}
+
+@font-face{
+    font-family: "myFont";
+      src: url("/江城解星体V1.3.ttf")
+}
+
+body{
+    color:#eee;
+}
+
+.protyle{
+    font-family: "Helvetica";
+}
+
+
+.protyle-wysiwyg [data-node-id] span[data-type~=block-ref], .protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref] {
+    filter: drop-shadow(0.1em 0.1em 0.28em #00ffff99);
+}
+
+
+.layout__resize:after {
+    filter: drop-shadow(0px 0px 3px cyan);
+}
+
+.layout__wnd--active .layout-tab-bar .item--focus:after {
+    background-color: #49d0b7;
+}
+
+
+.fn__flex.fn__flex-1>.fn__flex{
+    background-color: #202734 ;
+}
+.layout-tab-bar{
+    background-color: #000;
+}
+
+
+[data-type="NodeHeading"]>[spellcheck]{
+    background: linear-gradient(to bottom, #22897e, #3ad1cc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #4be7c696 !important;
+    caret-color: #3ad1cc;
+}
+
+.protyle-title__input {
+    color: #6fedda;
+    -webkit-text-stroke: 3px transparent;
+    background: linear-gradient(0deg,#026565,#5a9c9a);
+    -webkit-background-clip: text;
+    filter: drop-shadow(0px 4px 6px #06312699);
+    font-weight: 500;
+}
+
+
+[data-type="NodeHeading"]>div:first-child::before{
+    content:"";
+    width:1em;
+    height:1em;
+    position: absolute;
+    background: url("./src/star.svg");
+    background-position:left bottom;
+    background-repeat: no-repeat;
+}
+
+
+
+.protyle-title__input{
+    text-align: left;
+}
+
+
+.item:has(.item__close) {
+    padding: 0.2em 1em 0.1em 1em;
+}
+
+.item.item--focus::after{
+    background-color: transparent !important;
+}
+
+
+.item{
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+
+
+.item.item--focus::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-width: 0em 0em 0em 0em;
+    border-style: solid;
+    border-image-source: url("./src/border.png");
+    border-image-slice: 17% 14% 17% 14%;
+    border-image-width: 1rem;
+
+    z-index: 3;
+    filter: drop-shadow(2px 4px 6px cyan) opacity(0.8) blur(0.3px);
+}
+
+.fn__flex .item.item--focus:not(.fn__flex.layout__wnd--active .item.item--focus):before{
+    filter: drop-shadow(2px 4px 6px rgba(0, 255, 255, 0.648)) opacity(0.5) blur(0.3px);
+}
+
+
+
+
+.layout-tab-bar .item{
+    overflow: visible;
+}
+.layout{
+    overflow-y: visible;
+}
+.layout-tab-bar{
+    overflow: visible;
+}
+.layout-tab-bar .item {
+    border: 1px solid #65f1d633;
+    box-shadow: 4px 4px 4px #43d1b455;
+    scale:0.66;
+}
+
+
+
+
+.protyle-title {
+    margin-bottom: 1em !important;
+}
+
+
+
+
+
+.layout__center.fn__flex.fn__flex-1>.fn__flex-1.fn__flex{
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.protyle-gutters button:hover svg, .av__gutters button:hover svg {
+    color: #c8f3ff;
+    filter: drop-shadow(0px 0px 8px #0fff9d);
+}
+
+
+
+.tooltip {
+    padding: 0.6em 0.8em;
+    line-height: 1.2em;
+    box-shadow: 0px 0px 3px -1px #00ffc3;
+}
+
+
+.item.item--pin::after {
+    content: "";
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    left: 0.6em;
+    top: -15%;
+    background-image: url("./src/chains.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    filter: hue-rotate(355deg) brightness(1.2);
+}
+.layout__wnd--active .item.item--pin.item--focus::after{
+    left: 20%;
+    bottom: 70%;
+}
+
+
+.protyle-breadcrumb__item {
+    border-radius: 0.3em;
+    font-size: 0.8rem;
+    padding:0;
+    margin:0;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type~=a] {
+    color: var(--b3-protyle-inline-link-color);
+    filter: drop-shadow(0px 2px 8px #2cabcab0);
+}
+
+.b3-typography table tr:nth-child(2n) td, .protyle-wysiwyg table tr:nth-child(2n) td{
+    background-color: var(--b3-theme-surface);
+}
+
+.item__close{
+    display: none !important;
+}
+.dock__item--activefocus {
+    background-color: hsl(175.47deg 37.37% 40.58%) !important;
+}
+
+.b3-button{
+    border-radius: 0;
+}
+.b3-list{
+    font-size:.8rem;
+    scale:0.88;
+    font-family: Avantgarde, TeX Gyre Adventor, sans-serif;
+    font-weight: 300;
+    font-stretch: condensed;
+
+}
+.b3-list-item__text{
+    padding-left:0.12rem;
+}
+
+::selection {
+    background-color: #30A5EA;
+    color: white;
+}
+
+.protyle-wysiwyg [data-node-id] [spellcheck] {
+    font-size: 0.8rem;
+    color: #eee;
+    font-stretch: semi-condensed;
+    text-shadow: 1px 1px 10px #ddd, 1px 1px 5px #aaa;
+}
+
+.layout-tab-container, #dockRight, #dockBottom, #status, #commonMenu, #message, .b3-menu__item{
+    background-color: #000 !important;
+}
+
+.layout-tab-bar .item--readonly{
+    display: none !important;
+}
+
+
+.hljs{
+    background-color: #00fbff11 !important;
+    border: 1px solid #333;
+    font-size: 0.66rem !important;
+}
+

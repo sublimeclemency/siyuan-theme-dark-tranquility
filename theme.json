@@ -1,0 +1,30 @@
+{
+  "name": "dark-tranquility",
+  "author": "sublimeclemency",
+  "url": "https://github.com/sublimeclemency/siyuan-theme-dark-tranquility",
+  "version": "1.0.0",
+  "displayName": {
+    "default": "dark tranquility",
+    "zh_CN": "深夜宁静"
+  },
+  "description": {
+    "default": "dark theme - pure black background - turquoise cool colors - my tranquility",
+    "zh_CN": "深夜主题,纯黑背景,颜色绿松,安心宁静"
+  },
+  "readme": {
+    "default": "README.md",
+    "zh_CN": "README_zh_CN.md"
+  },
+  "i18n": [
+    "en_US",
+    "zh_CN"
+  ],
+  "funding": {
+    "openCollective": "",
+    "patreon": "",
+    "github": ""
+  },
+  "modes": [
+    "dark"
+  ]
+}
