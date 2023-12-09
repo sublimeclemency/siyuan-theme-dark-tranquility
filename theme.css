@@ -1,6 +1,7 @@
 /* this is a theme.css file for siyuan */
 
 :root{
+    font-size: clamp(0.9em, 2vw + .6em, 1.1em);
     --b3-theme-primary: hsl(163.28deg 54.79% 47.41%);
     --b3-theme-primary-light: hsl(162.14deg 55.01% 54.84% / 72%);
     --b3-theme-primary-lighter: hsl(169.89deg 86.18% 57.45% / 48%);
@@ -56,8 +57,10 @@ body{
     color:#eee;
 }
 
+
+
 .protyle{
-    font-family: "Helvetica";
+    font-family: myFont, Helvetica;
 }
 
 
@@ -84,11 +87,12 @@ body{
 
 
 [data-type="NodeHeading"]>[spellcheck]{
-    background: linear-gradient(to bottom, #22897e, #3ad1cc);
+    background: linear-gradient(to bottom, #289e92, #21FFC4);
     -webkit-background-clip: text;
     background-clip: text;
-    color: #4be7c696 !important;
+    color: transparent !important;
     caret-color: #3ad1cc;
+    text-shadow: none;
 }
 
 .protyle-title__input {
@@ -100,18 +104,14 @@ body{
     font-weight: 500;
 }
 
-
-[data-type="NodeHeading"]>div:first-child::before{
-    content:"";
-    width:1em;
-    height:1em;
-    position: absolute;
-    background: url("./src/star.svg");
-    background-position:left bottom;
-    background-repeat: no-repeat;
+.protyle-wysiwyg [data-node-id][custom-riff-decks] {
+    box-shadow: none !important;
 }
-
-
+.b3-typography mark, .b3-typography span[data-type~=mark], .protyle-wysiwyg mark, .protyle-wysiwyg span[data-type~=mark]{
+    background-color: transparent !important;
+    text-shadow: none !important;
+    color: #21FFC4;
+}
 
 .protyle-title__input{
     text-align: left;
@@ -148,7 +148,7 @@ body{
     border-image-width: 1rem;
 
     z-index: 3;
-    filter: drop-shadow(2px 4px 6px cyan) opacity(0.8) blur(0.3px);
+    filter: drop-shadow(2px 4px 6px cyan) opacity(0.9) blur(0.3px);
 }
 
 .fn__flex .item.item--focus:not(.fn__flex.layout__wnd--active .item.item--focus):before{
@@ -168,13 +168,15 @@ body{
     overflow: visible;
 }
 .layout-tab-bar .item {
+
     border: 1px solid #65f1d633;
     box-shadow: 4px 4px 4px #43d1b455;
     scale:0.66;
 }
 
-
-
+.layout-tab-bar .item span {
+    color: white !important;
+}
 
 .protyle-title {
     margin-bottom: 1em !important;
@@ -224,7 +226,7 @@ body{
 
 .protyle-breadcrumb__item {
     border-radius: 0.3em;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     padding:0;
     margin:0;
 }
@@ -254,7 +256,6 @@ body{
     font-family: Avantgarde, TeX Gyre Adventor, sans-serif;
     font-weight: 300;
     font-stretch: condensed;
-
 }
 .b3-list-item__text{
     padding-left:0.12rem;
@@ -265,25 +266,47 @@ body{
     color: white;
 }
 
-.protyle-wysiwyg [data-node-id] [spellcheck] {
-    font-size: 0.8rem;
+.protyle-wysiwyg [data-node-id] {
     color: #eee;
     font-stretch: semi-condensed;
     text-shadow: 1px 1px 10px #ddd, 1px 1px 5px #aaa;
 }
 
-.layout-tab-container, #dockRight, #dockBottom, #status, #commonMenu, #message, .b3-menu__item{
-    background-color: #000 !important;
+.protyle-title__input {
+    font-size: 1.8rem !important;
 }
+
+.protyle-title__input .p {
+    font-size: 1.1rem !important;
+}
+
 
 .layout-tab-bar .item--readonly{
     display: none !important;
 }
 
-
-.hljs{
-    background-color: #00fbff11 !important;
-    border: 1px solid #333;
-    font-size: 0.66rem !important;
+.b3-typography, .protyle-wysiwyg .p, .protyle-title {
+    font-size: 0.8rem !important;
 }
+
+.protyle-wysiwyg .h1 {
+    font-size: 1.4rem;
+}
+
+.protyle-wysiwyg .h2 {
+    font-size: 1.2rem;
+}
+.protyle-wysiwyg .h3 {
+    font-size: 1.1rem;
+}
+.protyle-wysiwyg .h4 {
+    font-size: 1.0rem;
+}
+.protyle-wysiwyg .h5 {
+    font-size: 0.9rem;
+}
+.protyle-wysiwyg .h6 {
+    font-size: 0.85rem;
+}
+
 
