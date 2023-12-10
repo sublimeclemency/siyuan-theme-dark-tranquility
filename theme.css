@@ -270,6 +270,9 @@ body{
     color: #eee;
     font-stretch: semi-condensed;
     text-shadow: 1px 1px 10px #ddd, 1px 1px 5px #aaa;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 3rem;
 }
 
 .protyle-title__input {
