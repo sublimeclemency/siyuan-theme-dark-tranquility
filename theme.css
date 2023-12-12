@@ -48,19 +48,22 @@
     --b3-dialog-shadow: 0 0px 0px 2px #4be7c696, 0 0 26px 3px #6cc0ae70;
 }
 
-@font-face{
-    font-family: "myFont";
-      src: url("/江城解星体V1.3.ttf")
+.fn__flex.fn__flex-1>.fn__flex{
+    background-color: #000 !important;
 }
+
 
 body{
     color:#eee;
 }
 
+#toolbar{
+    background-color: #000;
+}
 
 
 .protyle{
-    font-family: myFont, Helvetica;
+    font-family: Helvetica;
     font-size: 0.9rem !important;
 }
 
@@ -147,12 +150,11 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-width: 0em 0em 0em 0em;
+    border-width: 0 0 0 0;
     border-style: solid;
     border-image-source: url("./src/border.png");
-    border-image-slice: 17% 14% 17% 14%;
+    border-image-slice: 18% 15% 18% 15%;
     border-image-width: 1rem;
-
     z-index: 3;
     filter: drop-shadow(2px 4px 6px cyan) opacity(0.9) blur(0.3px);
 }
@@ -161,21 +163,19 @@ body{
     filter: drop-shadow(2px 4px 6px rgba(0, 255, 255, 0.648)) opacity(0.5) blur(0.3px);
 }
 
-
-
-
 .layout-tab-bar .item{
     overflow: visible;
     font-size: 0.8rem !important;
+    margin:auto;
 }
 .layout{
     overflow-y: visible;
 }
-.layout-tab-bar{
+.layout-tab-bar, .layout-tab-container{
     overflow: visible;
+    background-color: #000;
 }
-.layout-tab-bar .item {
-
+.layout-tab-bar .item, .layout-tab-container .item{
     border: 1px solid #65f1d633;
     box-shadow: 4px 4px 4px #43d1b455;
     scale:0.66;
@@ -294,10 +294,10 @@ body{
 }
 .b3-list{
     font-size:.8rem;
-    scale:0.88;
     font-family: Avantgarde, TeX Gyre Adventor, sans-serif;
     font-weight: 300;
     font-stretch: condensed;
+    padding:0 1% 0;
 }
 .b3-list-item__text{
     padding-left:0.12rem;
@@ -308,13 +308,15 @@ body{
     color: white;
 }
 
-.protyle-wysiwyg [data-node-id] [spellcheck] {
+.protyle-wysiwyg [data-node-id]{
     color: #eee;
-    font-stretch: semi-condensed;
-    text-shadow: 1px 1px 10px #ddd, 1px 1px 5px #aaa;
-    font-size: .8rem;
-    
     min-height:1rem;
+    font-size: .8rem;
+}
+
+.protyle-wysiwyg [data-node-id] [spellcheck]{
+    font-stretch: semi-condensed;
+    text-shadow: 0.2rem 0.3rem 1rem rgba(255,255,255,0.98);
 }
 
 .protyle-title__input {
@@ -324,10 +326,26 @@ body{
 }
 
 
-.layout-tab-bar .item--readonly{
+.layout-tab-bar .item--readonly, .layout-tab-bar--readonly {
     display: none !important;
 }
 
-/*.b3-typography, .protyle-wysiwyg .p, .protyle-title {
-    font-size: 0.8rem !important;
-}*/
+.protyle-wysiwyg .h1 {
+    font-size: 1.4rem !important;
+}
+
+.protyle-wysiwyg .h2 {
+    font-size: 1.2rem !important;
+}
+.protyle-wysiwyg .h3 {
+    font-size: 1.1rem !important;
+}
+.protyle-wysiwyg .h4 {
+    font-size: 1.0rem !important;
+}
+.protyle-wysiwyg .h5 {
+    font-size: 0.9rem !important;
+}
+.protyle-wysiwyg .h6 {
+    font-size: 0.85rem !important;
+}
