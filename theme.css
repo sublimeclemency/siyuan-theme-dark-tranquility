@@ -57,7 +57,7 @@ body{
     color:#eee;
 }
 
-#toolbar{
+#toolbar,#status{
     background-color: #000;
 }
 
@@ -294,7 +294,7 @@ body{
 }
 .b3-list{
     font-size:.8rem;
-    font-family: Avantgarde, TeX Gyre Adventor, sans-serif;
+    font-family: TeX Gyre Adventor,  Avantgarde, sans-serif;
     font-weight: 300;
     font-stretch: condensed;
     padding:0 1% 0;
@@ -309,14 +309,14 @@ body{
 }
 
 .protyle-wysiwyg [data-node-id]{
-    color: #eee;
-    min-height:1rem;
+    color: #fff;
     font-size: .8rem;
 }
 
 .protyle-wysiwyg [data-node-id] [spellcheck]{
     font-stretch: semi-condensed;
-    text-shadow: 0.2rem 0.3rem 1rem rgba(255,255,255,0.98);
+    text-shadow: 0.1rem 0.1rem .4rem rgba(255,255,255,0.6);
+    min-height:1rem;
 }
 
 .protyle-title__input {
